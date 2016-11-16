@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta charset="utf-8">
+      <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+      <title>Nginx Stats</title>
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/pure.min.css">
+      <link rel="stylesheet" type="text/css" href="css/site.css">
+  </head>
+
+  <body>
+      <div class="content">
+          <div id="readme"> </div>
+      </div>
+
+      <script src="js/markdown.js"></script>
+      <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', '/README.md');
+          xhr.onload = function() {
+              if (xhr.status === 200) {
+                  readme.innerHTML = markdown.toHTML(xhr.responseText);
+              } else {
+                  alert('Could not GET /README.md, Returned status :' + xhr.status);
+              }
+          };
+          xhr.send();
+      </script>
+
+  </body>
+</html>
