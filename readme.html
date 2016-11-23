@@ -18,7 +18,7 @@
       <script src="js/markdown.js"></script>
       <script>
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', '/README.md');
+          xhr.open('GET', '/ms/README.md');
           xhr.onload = function() {
               if (xhr.status === 200) {
                   readme.innerHTML = markdown.toHTML(xhr.responseText);
