@@ -8,6 +8,7 @@
       <link rel="stylesheet" type="text/css" href="css/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/pure.min.css">
       <link rel="stylesheet" type="text/css" href="css/site.css">
+      <script src="js/marked.js"></script>
   </head>
 
   <body>
@@ -15,13 +16,12 @@
           <div id="readme"> </div>
       </div>
 
-      <script src="js/markdown.js"></script>
       <script>
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', '/ms/README.md');
+          xhr.open('GET', 'http://localhost:8080/ms/README.md');
           xhr.onload = function() {
               if (xhr.status === 200) {
-                  readme.innerHTML = markdown.toHTML(xhr.responseText);
+                  readme.innerHTML = marked(xhr.responseText);
               } else {
                   alert('Could not GET /README.md, Returned status :' + xhr.status);
               }

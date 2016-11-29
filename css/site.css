@@ -65,9 +65,9 @@ a:hover {
     transition: all 0.15s linear;
 }
 
-code {
+pre {
     font-family: monospace,monospace;
-    font-size: .7em;
+    font-size: .9em;
     background-color: black;
     padding: .8em;
 }
