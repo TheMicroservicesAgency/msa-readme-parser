@@ -18,7 +18,7 @@
 
       <script>
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', 'http://localhost:8080/ms/README.md');
+          xhr.open('GET', '/ms/README.md');
           xhr.onload = function() {
               if (xhr.status === 200) {
                   readme.innerHTML = marked(xhr.responseText);
