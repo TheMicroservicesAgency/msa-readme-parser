@@ -8,4 +8,4 @@ Once the page loads, it will try to fetch /README.md, parse & display the markdo
 
 ## About
 
-A project by the [Microservices Agency](https://microservices.agency).
+A project by the [Microservices Agency](http://microservices.agency).
